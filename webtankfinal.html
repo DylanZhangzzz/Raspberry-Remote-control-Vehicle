@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tank remote control unit</title>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <style type="text/css">
+    body{
+         background-color:#777777;
+         }
+        
+        .low-level {
+                height: 45px;
+                width: 45px;
+                background-color: #FFA500; /* orange*/
+                border: none;
+                color: white;
+                padding: 5px 6px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                margin:5px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+                box-shadow: 0 35px 35px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                 }
+
+        .mid {
+                height: 25px;
+                width: 60px;
+                border-style:solid;
+                border-color:#black;
+                background-color: #FFFFFF;
+                color:red;
+                padding: 5px 6px; 
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 10px;
+                margin: 2px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+                box-shadow: 0 35px 35px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                } 
+        .top-level {
+                height: 30px;
+                width: 50px;
+                background-color: #FFA500; /* orange*/
+                border: none;
+                color: white;
+                padding: 5px 6px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 10px;
+                margin: 2px 2px;
+                cursor: pointer;
+                border-radius: 16px;
+                box-shadow: 0 35px 35px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            } 
+        .fire {height: 50px;
+                width: 50px;
+                background-color: #FF0000; /* red*/
+                border: none;
+                color: white;
+                padding: 5px 6px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 10px;
+                cursor: pointer;
+                border-radius: 40px;
+                box-shadow: 0 65px 65px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+        .fire:active {
+                       background-color: #808080;
+                      transform: translateY(4px);
+            }
+
+        #forward-left {
+            margin-left: 55px;
+        }
+        #forward {
+            margin-top: 3px;
+        }
+        #left {
+            margin-left: 55px;
+        }
+        #backward-left {
+            margin-left: 55px;
+        }
+
+        #aim-on{
+            margin-left: 30px;
+        }
+        #turret-left{
+            margin-left: 30px;
+        }
+        #gun-up{
+            margin-left: 250px;
+        }
+        #gun-down{
+            margin-left: 250px;
+        }
+
+    </style>
+    <script type="text/javascript">
+         $(document).ready(function(){
+         $("#forward").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 1},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+         $("#stop").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 0},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#back").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 2},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#left").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 3},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#right").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 4},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#turret-left").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 5},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#turret-right").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 6},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#shoot").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 7},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#forward-left").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 8},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#forward-right").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 9},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#backward-left").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 10},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#backward-right").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 11},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#gun-up").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 12},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#gun-down").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 13},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#aim-on").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 14},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+        $("#aim-off").click(function(){
+                $.ajax({
+                        type: "GET",
+                        url: "http://192.168.12.1:8899/car",
+                        data: {"a": 15},
+                        dataType: "json",
+                        cache: "false",
+                        success: function(data){},
+                        error: function(data){}
+                        });
+        });
+});
+</script>
+</head>
+<body>
+<div style="height:550px;width:600px;margin:0 auto;">
+<div style="height:250px;width:360px;margin:0 auto;">
+<iframe src="http://192.168.12.1:8080/javascript_simple.html" frameborder="0" width="360" height="250"></iframe>
+</div>
+<div id="container" style="height:160px;width:600px;margin:0 auto;">
+    <div style="height:50px;width:600px;" >
+        <button id='forward-left' class="low-level" name="forward-left">⬁</button>
+        <button id="forward" class="low-level" name="forward">⬆︎</button>
+        <button id='forward-right' class="low-level" name="forward-right">⬀</button>
+        <button id="gun-up" class="top-level" name="gun-up">gun up</button>
+    </div>
+    <div style="height:50px;width:600px;" >
+        <button id='left' class="low-level" name="left">◀︎</button>
+        <button id='stop' class="low-level">◼︎</button>
+        <button id='right' class="low-level">▶︎</button>
+        <button id="aim-on" class="mid" name="aim-on">aim on</button>
+        <button id="aim-off" class="mid" name="aim-off">aim off</button>
+        <button id="turret-left" class="top-level" name="turret-left">turret left</button>
+        <button id="shoot" class="fire" name="shoot">Fire</button>
+        <button id="turret-right" class="top-level" name="turret-right">turret right</button>
+    </div>
+    <div style="height:50px;width:600px;">
+        <button id='backward-left' class="low-level">⬃</button>
+        <button id='back' class="low-level">⬇︎</button>
+        <button id='backward-right' class="low-level">⬂</button>
+        <button id="gun-down" class="top-level" name="gun-down">gun down</button>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
