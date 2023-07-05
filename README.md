@@ -1,4 +1,8 @@
-Pi tank quick start guide by Dinghuang Zhang This file aim to easily test my code.
+Pi tank quick start guide by Dinghuang Zhang 
+This file aim to easily test the code.
+
+![2142e49c8416b08bc7149fe9439c9f5](https://github.com/DylanZhangzzz/Raspberry-Remote-control-Vehicle/assets/42655081/1b27bd77-717a-46e1-9e98-f0e14c685df7)
+
 In side the folder there are 4 document .
 1. tank.py: tank gpio settings
 2. tankwebserver.py: The python webserver
